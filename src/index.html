@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>For Holly</title>
+    </head>
+    <body @keydown="data = typo.type($event)" x-bind:style="'background-color:' + data.color + ';'" x-data="{ data: { character: '', message: '' } }">
+        <div class="container-fluid">
+            <span x-html="data.message"></span>
+            <h1 x-html="data.character"></h1>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
+
+.container-fluid {
+    --bs-gutter-y: var(--bs-gutter-x);
+    padding-bottom: calc(var(--bs-gutter-y) * .5);
+    padding-top: calc(var(--bs-gutter-y) * .5);
+}
+
+h1 {
+    bottom: 0;
+    display: flex;
+    font-size: 75vw;
+    justify-content: center;
+    left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+html {
+    height: 100vh;
+    word-wrap: break-word;
+}
