@@ -9,11 +9,14 @@ window.typo = {
     message: '',
     type: e => {
         e.preventDefault();
+
         let color = '#';
         let key   = null;
+
         for (let i = 0; i < 3 ; i++) {
             color += Math.round(Math.random() * 255).toString(16);
         }
+
         let map = {
             Alt: '@',
             AltGraph: '@',
@@ -30,15 +33,21 @@ window.typo = {
             Shift: '&uArr;',
             Tab: '&rarrtl;',
         }
+
         if (map[e.key]) {
             key = map[e.key];
         } else {
             key = e.key.toUpperCase();
         }
+
+        typo.message += key;
+
+        typo.message = typo.message.slice(-50);
+
         return {
             character: key,
             color:     color,
-            message:   typo.message += key,
+            message:   typo.message,
         };
     }
 };

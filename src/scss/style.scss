@@ -1,25 +1,46 @@
 @import "~bootstrap/scss/bootstrap-reboot";
 @import "~bootstrap/scss/bootstrap-grid";
 
-.container-fluid {
+:root{
     --bs-gutter-y: var(--bs-gutter-x);
-    padding-bottom: calc(var(--bs-gutter-y) * .5);
-    padding-top: calc(var(--bs-gutter-y) * .5);
+}
+
+body,
+.container-fluid,
+html {
+    height: 100%;
+}
+
+.container-fluid {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    padding: $spacer;
 }
 
 h1 {
-    bottom: 0;
     display: flex;
-    font-size: 75vw;
+    font-size: calc(100vh - #{$spacer * 3});
     justify-content: center;
-    left: 0;
+    line-height: 1;
     margin-bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 html {
     height: 100vh;
     word-wrap: break-word;
+}
+
+span {
+    display: block;
+    font-size: $spacer;
+    justify-content: center;
+    left: $spacer;
+    line-height: 1;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    top: $spacer;
+    width: calc(100% - #{$spacer * 2});
+    white-space: nowrap;
 }
